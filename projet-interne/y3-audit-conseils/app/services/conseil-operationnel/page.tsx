@@ -6,7 +6,7 @@ export default function ConseilOperationnelPage() {
   const conseilOperationnelSlides: Slide[] = [
     {
       id: 1,
-      title: "Conseil Opérationnel",
+      title: "Quantitative Risk & Analytics",
       description: "Optimisez, digitalisez, accélérez votre performance opérationnelle.",
       image: "/images/5.png",
       buttonText: "Découvrir nos services",
@@ -21,7 +21,7 @@ export default function ConseilOperationnelPage() {
       <main className="py-12">
         <div className="container mx-auto px-4">
           <div className="pl-4 md:pl-8 lg:pl-32 mb-12">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#073E5D] mb-4">Conseil opérationnel</h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#073E5D] mb-4">Quantitative Risk & Analytics</h1>
             <div className="w-20 h-1 bg-[#80C342] mb-6"></div>
           </div>
 
@@ -94,9 +94,9 @@ export default function ConseilOperationnelPage() {
           </div>
 
           <div className="text-center">
-            <h2 className="text-2xl font-semibold text-[#073E5D] mb-6">Besoin d'un accompagnement en conseil opérationnel ?</h2>
+            <h2 className="text-2xl font-semibold text-[#073E5D] mb-6">Besoin d'un accompagnement en Quantitative Risk & Analytics ?</h2>
             <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
-              Contactez-nous pour discuter de vos besoins spécifiques et découvrir comment nos services de conseil opérationnel
+              Contactez-nous pour discuter de vos besoins spécifiques et découvrir comment nos services de Quantitative Risk & Analytics
               peuvent contribuer à la performance et au développement de votre entreprise.
             </p>
             <Link

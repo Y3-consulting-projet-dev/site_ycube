@@ -22,7 +22,7 @@ export function MainServices() {
       link: "/services/conseil-financier",
     },
     {
-      title: "Conseil Opérationnel",
+      title: "Quantitative Risk & Analytics",
       description: "Notre expertise vous accompagne. \nAmélioration des processus.",
       link: "/services/conseil-en-gestion",
     },

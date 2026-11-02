@@ -51,7 +51,7 @@ export default function NotreHistoirePage() {
               <p className="text-gray-100 text-lg leading-relaxed hover:text-white transition-colors duration-200">
                Notre cabinet déploie son savoir-faire autour de quatre domaines de compétences
                complémentaires :  l'expertise-comptable,l'audit,  le conseil
-               financier et le conseil opérationnel.
+               financier et le Quantitative Risk & Analytics.
               </p>
               <p className="text-gray-100 text-lg leading-relaxed hover:text-white transition-colors duration-200">
                 Cette approche intégrée nous permet d'accompagner nos clients dans

@@ -21,7 +21,7 @@ const partners: Expert[] = [
     description: [
       "Fort de plus de vingt années d’expérience en audit et en comptabilité, Georges apporte une expertise internationale remarquable, acquise notamment chez Deloitte et Grant Thornton. Son parcours l’a conduit des bureaux de Deloitte Global aux États-Unis (2007-2010) aux fonctions de direction au sein du groupe IPS (WA) et de Deloitte Afrique francophone.",
       "Spécialisé dans l’accompagnement de filiales de groupes internationaux et d’entreprises locales, Georges a développé une expertise sectorielle approfondie dans la finance, l’agro-industrie, les services, l’énergie, les médias et les télécommunications. Avant de co-fonder Y3 Audit & Conseils, il a contribué activement au développement de Grant Thornton Audit Côte d’Ivoire.",
-      "Georges pilote nos missions d’audit et de conseil opérationnel, alliant rigueur technique et vision stratégique pour répondre aux enjeux de nos clients.",
+      "Georges pilote nos missions d’audit et de Quantitative Risk & Analytics, alliant rigueur technique et vision stratégique pour répondre aux enjeux de nos clients.",
     ],
     contact: {
       email: "georges.yaoyao@ycubeac.com",
@@ -51,25 +51,6 @@ const partners: Expert[] = [
 
 // Base de données des experts
 const experts: Expert[] = [
-  {
-    id: 3,
-    name: "Christiane Guehi",
-    position: "Senior Manager Expertise Comptable",
-    image: "/images/christiane Guei.jpg",
-    slug: "christiane-guehi",
-    isPartner: false,
-    bio: "Christiane Guehi est Manager chez Y3 Audit & Conseils. Elle est basée à Abidjan.",
-    description: [
-      "Diplômée du Diplôme Supérieur de Gestion et de Comptabilité de l'INTEC Paris, Christiane a rejoint Y3 Audit & Conseils en octobre 2024, apportant une solide expérience de 9 années acquises chez Deloitte Côte d'Ivoire et Sénégal.",
-      "Spécialiste reconnue en expertise comptable, audit et commissariat aux comptes, elle pilote des missions diversifiées allant de l'audit légal et contractuel à la consolidation des comptes. Son expertise s'étend également à l'optimisation fiscale, ainsi qu'à la gestion financière et de la paie.",
-      "Christiane conjugue rigueur technique et approche pragmatique pour délivrer à nos clients des solutions adaptées à leurs besoins opérationnels et réglementaires.",
-    ],
-    contact: {
-      email: "christiane.guehi@ycubeac.com",
-      phone: "",
-      linkedin: "https://www.linkedin.com/in/christiane-guehi-seoulou-5a1814135/",
-    },
-  },
   {
     id: 4,
     name: "Stéphane Gnahoua",
@@ -129,40 +110,40 @@ const experts: Expert[] = [
   },
   {
     id: 7,
-    name: "Augustin Kpantché",
+    name: "Elisé GUESSENND",
     position: "Manager Conseil Financier",
-    image: "/images/Augustin.jpg",
+    image: "/images/elise guessand.jpg",
     slug: "augustin-kpantche",
     isPartner: false,
-    bio: "Augustin Kpantché est Expert Comptable Senior chez Y3 Audit & Conseils. Il est basé à Abidjan.",
+    bio: "Kouadio Assane Elisé Guessennd est Manager Conseil financier chez Y3 Audit & Conseils.",
     description: [
-      "Titulaire d'un Master en Banque et Finance du CESAG de Dakar, Augustin apporte à Y3 Audit & Conseils plus de 10 années d'expérience dans l'univers financier. Son parcours l'a mené de l'analyse des risques à l'analyse financière, avant de diriger le département Banque d'Affaires d'une société de Gestion et d'intermédiation.",
-      "Cette progression lui a permis de développer une expertise pointue en modélisation financière, valorisation d'entreprise, levée de fonds, fusions-acquisitions et élaboration de business plans. Sa vision stratégique et sa connaissance approfondie des mécanismes financiers font de lui un interlocuteur privilégié pour nos clients dans leurs projets de développement et de transformation.",
-      "Augustin pilote nos missions de conseil financier avec la rigueur et l'expertise acquises au cœur des métiers de la finance, offrant à nos clients un accompagnement de haut niveau dans leurs décisions d'investissement.",
+      "Titulaire de la certification ICCF@HEC, Elisé apporte à notre équipe près de 7 années d'expérience en audit financier. Ce parcours lui a permis de développer une solide maîtrise des missions d'audit et d'expertise comptable.",
+      "Au sein de Y3 Audit & Conseils, qu'il a rejoint en 2024, Elisé intervient principalement sur les missions d'audit et d'expertise, où il met à profit sa rigueur, son sens de l'analyse et sa connaissance des standards professionnels pour garantir la qualité de nos interventions. Il a une exigence et une vision des meilleures pratiques internationales que nous appliquons au quotidien.",
+      "Elisé représente une nouvelle génération de professionnels alliant certification de haut niveau et expérience opérationnelle éprouvée.",
     ],
     contact: {
-      email: "augustin.kpantche@ycubeac.com",
+      email: "Elise.Guessennd@ycubeac.com",
       phone: "",
-      linkedin: "https://www.linkedin.com/in/augustin-kpantche-6658a427/",
+      linkedin: "https://www.linkedin.com/in/elis%C3%A9-kouadio-assane-guessennd-a45380226/",
     },
   },
   {
     id: 8,
-    name: "Revita Ouléi",
-    position: "Manager Conseil Opérationnel",
-    image: "/images/revita oule.jpg",
+    name: "Kalida Sani Labo",
+    position: "Manager Quantitative Risk & Analytics",
+    image: "/images/kalida labo.png",
     slug: "revita-oulei",
     isPartner: false,
-    bio: "Revita Ouléi est Manager Conseil Opérationnel chez Y3 Audit & Conseils. Elle est basée à Abidjan.",
+    bio: "Kalida Sani Labo est Manager Quantitative Risk & Analytics chez Y3 Audit & Conseils.",
     description: [
-      "Titulaire d'un Master en Audit & Contrôle de Gestion du CESAG, Revita apporte à notre équipe plus de 8 années d'expérience spécialisée dans l'environnement bancaire de l'UEMOA, acquise notamment chez PwC Abidjan.",
-      "Son expertise s'est forgée à travers l'accompagnement de nombreux établissements financiers sur des projets stratégiques : automatisation des processus prudentiels, conformités LCB-FT et projets de transformations. Elle maîtrise parfaitement les dispositifs Bâle I et II, la conformité réglementaire, la cartographie des processus et des risques, ainsi que la gestion de projet.",
-      "Cette spécialisation sectorielle unique permet à Revita d'apporter une valeur ajoutée par son expertise technique approfondie et sa connaissance spécifique à la zone UEMOA.",
+      "Diplômée d'un Master en Économétrie et Statistique Appliquée de l'Université d'Orléans et ingénieure des travaux statistiques de l'ENSAE, Kalida apporte à notre équipe plus de 5 années d'expérience en risque de crédit, dont près de 4 années chez Deloitte et une expérience chez Natixis. Ce parcours auprès de banques évoluant dans un cadre réglementaire européen lui a permis de développer une expertise reconnue en modélisation du risque de crédit, en scoring d'octroi et en calibration des paramètres PD, LGD et CCF.",
+      "Au sein de Y3 Audit & Conseils, Kalida pilote les missions de la practice QRA auprès des banques et institutions financières d'Afrique de l'Ouest francophone : construction et calibration de moteurs ECL IFRS 9, conception de scores d'octroi adaptés aux réalités locales (Mobile Money, saisonnalité agricole, économie informelle), backtesting et validation indépendante de modèles, ainsi que la formation des équipes risque et crédit. Elle conjugue rigueur statistique et connaissance du terrain pour concilier exigences réglementaires, qualité des données et enjeux métiers.",
+      "Kalida incarne une expertise quantitative de haut niveau mise au service des institutions financières de la région, alliant formation d'excellence et expérience éprouvée au sein de grands acteurs internationaux.",
     ],
     contact: {
-      email: "revita.oule@ycubeac.com",
+      email: "kalida.labo@ycubeac.com",
       phone: "",
-      linkedin: "https://www.linkedin.com/in/r%C3%A9vita-oul%C3%A9-20a663196/",
+      linkedin: "https://www.linkedin.com/in/kalida-sani-labo-a76960144/",
     },
   },
   {

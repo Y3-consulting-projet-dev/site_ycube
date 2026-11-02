@@ -45,7 +45,7 @@ export function Header() {
         { label: "Expertise comptable", href: "/services/expertise-comptable" },
         { label: "Audit", href: "/services/audit" },
         { label: "Conseil financier", href: "/services/conseil-financier" },
-        { label: "Conseil opérationnel", href: "/services/conseil-operationnel" },
+        { label: "Quantitative Risk & Analytics", href: "/services/conseil-operationnel" },
       ],
     },
     {

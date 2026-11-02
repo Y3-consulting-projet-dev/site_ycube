@@ -132,10 +132,10 @@ export default function NosMetiersPage() {
                 </div>
               </div>
 
-              {/* Section 4: CONSEIL OPÉRATIONNEL */}
+              {/* Section 4: Quantitative Risk & Analytics */}
               <div className="bg-[#80C342] p-8 rounded-lg shadow-lg text-white h-full">
                 <div className="mb-6">
-                  <h2 className="text-3xl lg:text-3xl font-bold mb-2"> Conseil Opérationnel</h2>
+                  <h2 className="text-3xl lg:text-3xl font-bold mb-2"> Quantitative Risk & Analytics</h2>
                   <p className="text-lg text-white font-semibold">Optimisez, digitalisez, accélérez</p>
                 </div>
 
@@ -464,7 +464,7 @@ export default function NosMetiersPage() {
         content={
           <div className="space-y-6">
             <div>
-              <h3 className="text-3xl font-bold text-[#073E5D] mb-2">Le Conseil Opérationnel pour transformer l'efficacité de votre entreprise</h3>
+              <h3 className="text-3xl font-bold text-[#073E5D] mb-2">Le Quantitative Risk & Analytics pour transformer l'efficacité de votre entreprise</h3>
               <h4 className="text-3xl font-bold text-[#80C342] mb-4">Notre engagement : de l'analyse à l'action, pour une performance durable</h4>
               <p className="text-gray-700 text-lg mb-4">
                 Dans le contexte économique actuel, l'efficacité opérationnelle est la clé de la compétitivité et de la croissance. Chez Y3 Audit & Conseils, nous allons au-delà du simple conseil : nous sommes votre partenaire d'exécution pour transformer vos processus, digitaliser vos opérations et garantir une performance mesurable sur le terrain.
@@ -475,7 +475,7 @@ export default function NosMetiersPage() {
             </div>
 
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="text-3xl font-bold text-[#073E5D] mb-4">Nos piliers de services en Conseil Opérationnel</h4>
+              <h4 className="text-3xl font-bold text-[#073E5D] mb-4">Nos piliers de services en Quantitative Risk & Analytics</h4>
               <div className="space-y-4">
                 <div className="border-l-4 border-[#80C342] pl-4">
                   <h5 className="text-xl font-bold text-[#073E5D]">1. Organisation & Processus</h5>
@@ -501,7 +501,7 @@ export default function NosMetiersPage() {
             </div>
 
             <div className="bg-white border border-gray-200 p-6 rounded-lg">
-              <h4 className="text-3xl font-bold text-[#073E5D] mb-4">Détail de nos services en Conseil Opérationnel</h4>
+              <h4 className="text-3xl font-bold text-[#073E5D] mb-4">Détail de nos services en Quantitative Risk & Analytics</h4>
 
               <div className="space-y-6">
                 <div>
@@ -571,7 +571,7 @@ export default function NosMetiersPage() {
             </div>
 
             <div className="bg-[#073E5D]/10 p-6 rounded-lg">
-              <h4 className="text-3xl font-bold text-[#073E5D] mb-3">Pourquoi choisir Y3 Audit & Conseils pour votre Conseil Opérationnel ?</h4>
+              <h4 className="text-3xl font-bold text-[#073E5D] mb-3">Pourquoi choisir Y3 Audit & Conseils pour votre Quantitative Risk & Analytics ?</h4>
               <p className="text-gray-700 text-lg mb-3">Notre expertise est ancrée dans la réalité du terrain et orientée vers le résultat.</p>
               <ul className="space-y-2 text-gray-700">
                 <li>• <strong>Pragmatisme et mise en œuvre :</strong> Nous ne produisons pas de rapports théoriques</li>

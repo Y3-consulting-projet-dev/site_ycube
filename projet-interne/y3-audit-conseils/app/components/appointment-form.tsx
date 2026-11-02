@@ -142,7 +142,7 @@ ${formData.firstName} ${formData.lastName}`
     { value: "expertise comptable", label: "Expertise comptable" },
     { value: "audit", label: "Audit" },
     { value: "conseil financier", label: "Conseil financier" },
-    { value: "conseil opérationnel", label: "Conseil opérationnel" },
+    { value: "Quantitative Risk & Analytics", label: "Quantitative Risk & Analytics" },
     { value: "autre", label: "Autre" },
   ]
 

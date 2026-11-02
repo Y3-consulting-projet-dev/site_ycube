@@ -41,7 +41,7 @@ export function Navigation() {
         { label: "Audit", href: "/services/audit" },
         { label: "Expertise comptable", href: "/services/expertise-comptable" },
         { label: "Conseil financier", href: "/services/conseil-financier" },
-        { label: "Conseil opérationnel", href: "/services/conseil-operationnel" },
+        { label: "Quantitative Risk & Analytics", href: "/services/conseil-operationnel" },
       ],
     },
     {

@@ -59,7 +59,7 @@
 //       color: "bg-blue-600"
 //     },
 //     {
-//       category: "Conseil Opérationnel",
+//       category: "Quantitative Risk & Analytics",
 //       percentage: 5,
 //       color: "bg-purple-600"
 //     }
@@ -210,7 +210,7 @@
 //                     { label: "Audit & Certification", color: "bg-[#073E5D]", percentage: "45%" },
 //                     { label: "Conseil Financier", color: "bg-[#80C342]", percentage: "30%" },
 //                     { label: "Expertise Comptable", color: "bg-blue-600", percentage: "20%" },
-//                     { label: "Conseil Opérationnel", color: "bg-purple-600", percentage: "5%" }
+//                     { label: "Quantitative Risk & Analytics", color: "bg-purple-600", percentage: "5%" }
 //                   ].map((item, index) => (
 //                     <div key={index} className="flex items-center justify-between">
 //                       <div className="flex items-center">

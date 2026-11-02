@@ -16,7 +16,30 @@ app.use(cors({
 app.use(express.json());
 
 // ✅ Configurer multer pour lire les fichiers dans la mémoire
-const upload = multer({ storage: multer.memoryStorage() });
+// Limite : 1 seul fichier PDF de 10 Mo maximum (le formulaire n'accepte que les .pdf)
+const upload = multer({
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 10 * 1024 * 1024, files: 1 },
+  fileFilter: (req, file, cb) => {
+    const isPdf = file.mimetype === 'application/pdf' && /\.pdf$/i.test(file.originalname);
+    cb(isPdf ? null : new Error('Seuls les fichiers PDF sont acceptés.'), isPdf);
+  },
+});
+
+// ✅ Échapper le HTML des données saisies par l'utilisateur
+const escapeHtml = (value) =>
+  String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
+// ✅ Construit le HTML à partir du texte (même rendu que le frontend : retours à la ligne -> <br>)
+const textToHtml = (text) => escapeHtml(text).replace(/\n/g, '<br>');
+
+// ✅ Seul destinataire autorisé pour les demandes de rendez-vous
+const RDV_RECIPIENT = 'hello@ycubeac.com';
 
 // ✅ Configuration du transporteur SMTP Gmail ou domaine
 const transporter = nodemailer.createTransport({
@@ -42,9 +65,19 @@ transporter.verify((error, success) => {
 // ==============================
 // ✅ Route pour envoyer un email avec pièce jointe (CV)
 // ==============================
-app.post('/send-email-with-attachment', upload.single('cv'), async (req, res) => {
+const uploadCv = (req, res, next) => {
+  upload.single('cv')(req, res, (err) => {
+    if (!err) return next();
+    const message = err.code === 'LIMIT_FILE_SIZE'
+      ? 'Le CV ne doit pas dépasser 10 Mo.'
+      : err.message || 'Fichier invalide.';
+    return res.status(400).json({ success: false, error: message });
+  });
+};
+
+app.post('/send-email-with-attachment', uploadCv, async (req, res) => {
   try {
-    const { subject, text, html, candidatEmail, candidatNom } = req.body;
+    const { subject, text, candidatEmail, candidatNom } = req.body;
 
     if (!subject || !text || !candidatEmail || !candidatNom) {
       return res.status(400).json({ error: "Tous les champs requis ne sont pas remplis." });
@@ -56,7 +89,7 @@ app.post('/send-email-with-attachment', upload.single('cv'), async (req, res) =>
       to: 'recrutement@ycubeac.com',
       subject,
       text,
-      html,
+      html: textToHtml(text),
       attachments: req.file ? [{
         filename: req.file.originalname,
         content: req.file.buffer,
@@ -78,7 +111,7 @@ Merci de votre intérêt pour Y3 Audit & Conseils !
 Cordialement,
 L'équipe RH
     `;
-    const confirmationHtml = confirmationText.replace(/\n/g, '<br>');
+    const confirmationHtml = textToHtml(confirmationText);
 
     const mailOptionsCandidat = {
       from: `"Y3 Audit & Conseils" <${process.env.SMTP_USER}>`,
@@ -113,18 +146,18 @@ L'équipe RH
 // ==============================
 app.post('/send-email', async (req, res) => {
   try {
-    const { to, subject, text, html } = req.body;
+    const { subject, text } = req.body;
 
-    if (!to || !subject || !text) {
+    if (!subject || !text) {
       return res.status(400).json({ error: "Données manquantes pour le rendez-vous" });
     }
 
     const info = await transporter.sendMail({
       from: `"Y3 Audit & Conseils" <${process.env.SMTP_USER}>`,
-      to, // depuis le frontend
+      to: RDV_RECIPIENT, // destinataire fixé côté serveur (le "to" envoyé par le frontend est ignoré)
       subject,
       text,
-      html,
+      html: textToHtml(text),
     });
 
     console.log("📨 Rendez-vous envoyé :", info.messageId);
@@ -156,7 +189,7 @@ app.post("/send-newsletter", async (req, res) => {
       html: `
         <div style="font-family:sans-serif">
           <h3>Nouvelle inscription à la newsletter :</h3>
-          <p><strong>${email}</strong></p>
+          <p><strong>${escapeHtml(email)}</strong></p>
         </div>
       `,
     };

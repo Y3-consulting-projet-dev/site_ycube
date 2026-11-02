@@ -32,7 +32,7 @@ export function ActionFields() {
       link: "/services/audit",
     },
     {
-      title: "Conseil Opérationnel",
+      title: "Quantitative Risk & Analytics",
       description: "Nos experts vous aident à répondre au mieux, aux enjeux juridiques et fiscaux de votre entreprise.",
       icon: <TrendingUp className="h-10 w-10 text-[#80C342]" />,
       link: "/services/conseil-operationnel",
