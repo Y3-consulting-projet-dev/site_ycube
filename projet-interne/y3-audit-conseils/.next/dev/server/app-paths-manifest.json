@@ -1,4 +1,7 @@
 {
   "/a-propos/notre-equipe/page": "app/a-propos/notre-equipe/page.js",
-  "/services/conseil-operationnel/page": "app/services/conseil-operationnel/page.js"
+  "/contact/rendez-vous/page": "app/contact/rendez-vous/page.js",
+  "/page": "app/page.js",
+  "/services/conseil-operationnel/page": "app/services/conseil-operationnel/page.js",
+  "/services/expertise-comptable/page": "app/services/expertise-comptable/page.js"
 }

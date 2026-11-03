@@ -58,12 +58,127 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$a
 ;
 ;
 ;
+const services = [
+    {
+        title: "Modélisation du risque de crédit & IFRS 9",
+        what: "C'est la conception et la mise en œuvre des modèles de pertes de crédit attendues (ECL) exigés par la norme IFRS 9 : probabilité de défaut (PD), perte en cas de défaut (LGD), exposition au défaut (EAD), classification en stages et intégration de scénarios macroéconomiques prospectifs.",
+        why: [
+            {
+                label: "Provisionnement juste",
+                text: "Vos dépréciations reflètent le risque réel de votre portefeuille"
+            },
+            {
+                label: "Conformité normative",
+                text: "Vous répondez aux exigences de vos commissaires aux comptes et de votre maison mère"
+            },
+            {
+                label: "Anticipation",
+                text: "Vous identifiez plus tôt la dégradation de vos encours"
+            }
+        ],
+        how: "Nous analysons vos historiques de crédit et construisons vos paramètres de risque. Nous définissons vos règles de staging et vos scénarios forward-looking. Nous calculons vos ECL, documentons la méthodologie et vous livrons un outil de calcul réutilisable par vos équipes."
+    },
+    {
+        title: "Stress tests & conformité prudentielle",
+        what: "C'est l'évaluation de la résistance de votre établissement face à des scénarios défavorables (choc économique, hausse des défauts, crise de liquidité) et le calcul de vos ratios réglementaires selon le dispositif prudentiel Bâle II/III applicable dans l'UMOA.",
+        why: [
+            {
+                label: "Solidité financière",
+                text: "Vous connaissez l'impact des chocs sur vos fonds propres"
+            },
+            {
+                label: "Dialogue réglementaire",
+                text: "Vous présentez des analyses solides à la BCEAO et à la Commission Bancaire"
+            },
+            {
+                label: "Planification du capital",
+                text: "Vous anticipez vos besoins en fonds propres"
+            }
+        ],
+        how: "Nous concevons des scénarios adaptés à votre profil de risque et à votre environnement économique. Nous projetons vos expositions, vos pertes et vos ratios de solvabilité. Nous vous accompagnons dans votre processus d'évaluation de l'adéquation des fonds propres (ICAAP) et dans la restitution des résultats à votre gouvernance."
+    },
+    {
+        title: "Validation & revue indépendante des modèles",
+        what: "C'est l'examen critique et indépendant de vos modèles existants (scoring, provisionnement, notation, tarification) afin de vérifier leur pertinence conceptuelle, la qualité de leurs données et la fiabilité de leurs résultats dans le temps.",
+        why: [
+            {
+                label: "Fiabilité",
+                text: "Vous vous assurez que vos modèles mesurent correctement le risque"
+            },
+            {
+                label: "Maîtrise du risque de modèle",
+                text: "Nous détectons les biais, les faiblesses et les dérives de performance"
+            },
+            {
+                label: "Gouvernance",
+                text: "Vous disposez d'une opinion indépendante pour vos comités et vos auditeurs"
+            }
+        ],
+        how: "Nous revoyons la documentation et les hypothèses de vos modèles. Nous réalisons des tests de performance, de stabilité et de backtesting, et répliquons les calculs clés. Nous vous remettons un rapport de validation présentant nos constats, leur niveau de criticité et un plan de remédiation."
+    },
+    {
+        title: "Risques de marché, de liquidité & ALM",
+        what: "C'est la mesure et le pilotage des risques de taux, de change et de liquidité liés à la structure de votre bilan, à travers la gestion actif-passif (ALM) : impasses de taux et de liquidité, sensibilité de la marge et de la valeur économique, Value at Risk.",
+        why: [
+            {
+                label: "Rentabilité protégée",
+                text: "Vous limitez l'impact des variations de taux sur votre marge"
+            },
+            {
+                label: "Liquidité sécurisée",
+                text: "Vous anticipez vos besoins de financement"
+            },
+            {
+                label: "Pilotage du bilan",
+                text: "Vos décisions de collecte et de placement reposent sur des chiffres fiables"
+            }
+        ],
+        how: "Nous cartographions vos expositions et définissons vos conventions d'écoulement. Nous construisons vos indicateurs de risques et vos limites. Nous mettons en place un reporting ALM périodique destiné à votre comité ALCO."
+    },
+    {
+        title: "Data Analytics & tableaux de bord des risques",
+        what: "C'est l'exploitation avancée de vos données grâce à la statistique et au machine learning : scoring d'octroi, segmentation de clientèle, détection d'anomalies et de fraudes, et restitution sous forme de tableaux de bord interactifs.",
+        why: [
+            {
+                label: "Décisions plus rapides",
+                text: "Vos équipes disposent d'indicateurs à jour et lisibles"
+            },
+            {
+                label: "Détection précoce",
+                text: "Les signaux faibles et les comportements atypiques sont repérés automatiquement"
+            },
+            {
+                label: "Valorisation de vos données",
+                text: "Votre patrimoine de données devient un avantage concurrentiel"
+            }
+        ],
+        how: "Nous auditons la qualité de vos données et structurons vos flux. Nous développons des modèles prédictifs adaptés à vos enjeux métier. Nous déployons des tableaux de bord de suivi des risques et formons vos équipes à leur utilisation."
+    }
+];
+const reasons = [
+    {
+        label: "Double compétence finance & quantitatif",
+        text: "Une équipe qui maîtrise à la fois les normes comptables et prudentielles et les méthodes statistiques"
+    },
+    {
+        label: "Connaissance du marché UMOA",
+        text: "Une compréhension fine des exigences de la BCEAO, de la Commission Bancaire et de la CIMA"
+    },
+    {
+        label: "Modèles transparents et auditables",
+        text: "Chaque modèle est documenté, justifié et transmis à vos équipes"
+    },
+    {
+        label: "Transfert de compétences",
+        text: "Nous formons vos collaborateurs pour vous rendre autonomes dans la durée"
+    }
+];
 function ConseilOperationnelPage() {
     const conseilOperationnelSlides = [
         {
             id: 1,
             title: "Quantitative Risk & Analytics",
-            description: "Optimisez, digitalisez, accélérez votre performance opérationnelle.",
+            description: "La modélisation quantitative au service de la maîtrise de vos risques.",
             image: "/images/5.png",
             buttonText: "Découvrir nos services",
             buttonLink: "/services/conseil-operationnel",
@@ -76,7 +191,7 @@ function ConseilOperationnelPage() {
                 slides: conseilOperationnelSlides
             }, void 0, false, {
                 fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                lineNumber: 20,
+                lineNumber: 98,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -92,242 +207,220 @@ function ConseilOperationnelPage() {
                                     children: "Quantitative Risk & Analytics"
                                 }, void 0, false, {
                                     fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                    lineNumber: 24,
+                                    lineNumber: 102,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "w-20 h-1 bg-[#80C342] mb-6"
                                 }, void 0, false, {
                                     fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                    lineNumber: 25,
+                                    lineNumber: 103,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                            lineNumber: 23,
+                            lineNumber: 101,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "mb-16",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "max-w-4xl mx-auto",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "bg-gray-50 p-6 rounded-lg shadow-sm",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                            className: "text-3xl md:text-4xl font-bold text-[#073E5D] mb-8 relative group",
-                                            children: [
-                                                "Stratégie d'entreprise",
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "absolute -bottom-2 left-0 w-16 h-1 bg-[#80C342] rounded-full group-hover:w-24 transition-all duration-300"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                                    lineNumber: 33,
-                                                    columnNumber: 19
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                            lineNumber: 31,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-xl text-gray-700 mb-4",
-                                            children: "Nous vous accompagnons dans la définition et la mise en œuvre de votre stratégie d'entreprise, en tenant compte de vos objectifs, de votre environnement concurrentiel et des tendances de votre marché."
-                                        }, void 0, false, {
-                                            fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                            lineNumber: 35,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-xl text-gray-700 mb-4",
-                                            children: "Notre approche collaborative vous permet de bénéficier de notre expertise tout en valorisant votre connaissance approfondie de votre activité, pour élaborer une stratégie pertinente et réaliste."
-                                        }, void 0, false, {
-                                            fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                            lineNumber: 39,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                    lineNumber: 30,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                lineNumber: 29,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                            lineNumber: 28,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "mb-16",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "max-w-4xl mx-auto",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "bg-gradient-to-br from-[#073E5D] to-[#0a4a6b] rounded-lg shadow-sm p-6 text-white",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                            className: "text-3xl md:text-4xl font-bold mb-8 relative group",
-                                            children: [
-                                                "Transformation digitale",
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "absolute -bottom-2 left-0 w-16 h-1 bg-[#80C342] rounded-full group-hover:w-24 transition-all duration-300"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                                    lineNumber: 52,
-                                                    columnNumber: 19
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                            lineNumber: 50,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "space-y-6",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-gray-100 text-xl leading-relaxed hover:text-white transition-colors duration-200",
-                                                    children: "Nous vous aidons à tirer parti des opportunités offertes par le digital pour transformer votre modèle d'affaires, optimiser vos processus et améliorer l'expérience de vos clients."
-                                                }, void 0, false, {
-                                                    fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                                    lineNumber: 55,
-                                                    columnNumber: 19
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-gray-100 text-xl leading-relaxed hover:text-white transition-colors duration-200",
-                                                    children: "Notre expertise vous permet d'identifier les technologies les plus pertinentes pour votre activité et de les intégrer efficacement dans votre organisation, en tenant compte des aspects humains et culturels du changement."
-                                                }, void 0, false, {
-                                                    fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                                    lineNumber: 59,
-                                                    columnNumber: 19
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                            lineNumber: 54,
-                                            columnNumber: 17
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                    lineNumber: 49,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                lineNumber: 48,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                            lineNumber: 47,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "bg-gray-50 p-8 rounded-lg shadow-sm mb-16",
+                            className: "max-w-5xl mx-auto space-y-12 mb-16",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "text-4xl font-bold text-[#073E5D] mb-4 text-center",
-                                    children: "Nos domaines d'expertise"
-                                }, void 0, false, {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "bg-gray-50 p-6 md:p-8 rounded-lg shadow-sm",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                            className: "text-2xl md:text-3xl font-bold text-[#073E5D] mb-4",
+                                            children: "La modélisation quantitative au service de la maîtrise de vos risques"
+                                        }, void 0, false, {
+                                            fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
+                                            lineNumber: 109,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-xl font-bold text-[#80C342] mb-4",
+                                            children: "Notre engagement : Rigueur, Transparence et Décision Éclairée"
+                                        }, void 0, false, {
+                                            fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
+                                            lineNumber: 112,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-lg text-gray-700 mb-4",
+                                            children: "Le risque est au cœur de toute activité financière. Chez Y3 Audit & Conseils, notre practice Quantitative Risk & Analytics (QRA) transforme vos données en indicateurs fiables pour mesurer, anticiper et piloter vos risques."
+                                        }, void 0, false, {
+                                            fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
+                                            lineNumber: 115,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-lg text-gray-700",
+                                            children: "Nous combinons expertise financière, modélisation statistique et maîtrise des exigences réglementaires (IFRS, dispositif prudentiel UMOA, CIMA) pour vous fournir des modèles robustes, documentés et auditables, qui éclairent vos décisions stratégiques et rassurent vos régulateurs comme vos actionnaires."
+                                        }, void 0, false, {
+                                            fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
+                                            lineNumber: 120,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                    lineNumber: 70,
+                                    lineNumber: 108,
                                     columnNumber: 13
                                 }, this),
+                                services.map((service, index)=>{
+                                    const dark = index % 2 === 0;
+                                    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: dark ? "bg-gradient-to-br from-[#073E5D] to-[#0a4a6b] rounded-lg shadow-sm p-6 md:p-8 text-white" : "bg-gray-50 p-6 md:p-8 rounded-lg shadow-sm",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                className: `text-2xl md:text-3xl font-bold mb-8 relative group ${dark ? "" : "text-[#073E5D]"}`,
+                                                children: [
+                                                    service.title,
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "absolute -bottom-2 left-0 w-16 h-1 bg-[#80C342] rounded-full group-hover:w-24 transition-all duration-300"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
+                                                        lineNumber: 143,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
+                                                lineNumber: 139,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                className: `text-xl font-bold mb-2 ${dark ? "" : "text-gray-800"}`,
+                                                children: "Qu'est-ce que c'est ?"
+                                            }, void 0, false, {
+                                                fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
+                                                lineNumber: 146,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: `text-lg mb-6 ${dark ? "text-gray-100" : "text-gray-700"}`,
+                                                children: service.what
+                                            }, void 0, false, {
+                                                fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
+                                                lineNumber: 147,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                className: `text-xl font-bold mb-2 ${dark ? "" : "text-gray-800"}`,
+                                                children: "Pourquoi c'est important pour vous ?"
+                                            }, void 0, false, {
+                                                fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
+                                                lineNumber: 149,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                                className: `text-lg space-y-2 mb-6 ${dark ? "text-gray-100" : "text-gray-700"}`,
+                                                children: service.why.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                        children: [
+                                                            "• ",
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                                children: [
+                                                                    item.label,
+                                                                    " :"
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
+                                                                lineNumber: 155,
+                                                                columnNumber: 27
+                                                            }, this),
+                                                            " ",
+                                                            item.text
+                                                        ]
+                                                    }, item.label, true, {
+                                                        fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
+                                                        lineNumber: 154,
+                                                        columnNumber: 23
+                                                    }, this))
+                                            }, void 0, false, {
+                                                fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
+                                                lineNumber: 152,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                className: `text-xl font-bold mb-2 ${dark ? "" : "text-gray-800"}`,
+                                                children: "Comment nous vous accompagnons ?"
+                                            }, void 0, false, {
+                                                fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
+                                                lineNumber: 160,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: `text-lg ${dark ? "text-gray-100" : "text-gray-700"}`,
+                                                children: service.how
+                                            }, void 0, false, {
+                                                fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
+                                                lineNumber: 163,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, service.title, true, {
+                                        fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
+                                        lineNumber: 131,
+                                        columnNumber: 17
+                                    }, this);
+                                }),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "grid grid-cols-1 md:grid-cols-3 gap-6 mt-8",
+                                    className: "bg-gray-50 p-6 md:p-8 rounded-lg shadow-sm",
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "bg-white p-6 rounded-lg shadow-sm",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-[#80C342] text-xl font-bold mb-2",
-                                                    children: "Performance opérationnelle"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                                    lineNumber: 73,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-lg text-gray-700",
-                                                    children: "Nous vous aidons à l'ensemble de vos processus et à améliorer votre efficacité opérationnelle pour gagner en compétitivité."
-                                                }, void 0, false, {
-                                                    fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                                    lineNumber: 74,
-                                                    columnNumber: 17
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                            className: "text-2xl md:text-3xl font-bold text-[#073E5D] mb-4",
+                                            children: "Pourquoi choisir Y3 Audit & Conseils pour votre Quantitative Risk & Analytics ?"
+                                        }, void 0, false, {
                                             fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                            lineNumber: 72,
+                                            lineNumber: 170,
                                             columnNumber: 15
                                         }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "bg-white p-6 rounded-lg shadow-sm",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-[#80C342] text-xl font-bold mb-2",
-                                                    children: "Innovation"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                                    lineNumber: 80,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-lg text-gray-700",
-                                                    children: "Nous vous accompagnons dans votre démarche d'innovation pour développer de nouveaux produits ou modèles d'affaires."
-                                                }, void 0, false, {
-                                                    fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                                    lineNumber: 81,
-                                                    columnNumber: 17
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-lg text-gray-700 mb-4",
+                                            children: "Nous sommes plus qu'un prestataire de modèles, nous sommes votre partenaire de maîtrise des risques."
+                                        }, void 0, false, {
                                             fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                            lineNumber: 79,
+                                            lineNumber: 173,
                                             columnNumber: 15
                                         }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "bg-white p-6 rounded-lg shadow-sm",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-[#80C342] text-xl font-bold mb-2",
-                                                    children: "Conduite du changement"
-                                                }, void 0, false, {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                                            className: "text-lg text-gray-700 space-y-2",
+                                            children: reasons.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                    children: [
+                                                        "• ",
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                            children: [
+                                                                item.label,
+                                                                " :"
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
+                                                            lineNumber: 179,
+                                                            columnNumber: 23
+                                                        }, this),
+                                                        " ",
+                                                        item.text
+                                                    ]
+                                                }, item.label, true, {
                                                     fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                                    lineNumber: 87,
-                                                    columnNumber: 17
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-lg text-gray-700",
-                                                    children: "Nous prenons en charge les dimensions humaines et organisationnelles. Afin de garantir la réussite de vos transformations."
-                                                }, void 0, false, {
-                                                    fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                                    lineNumber: 88,
-                                                    columnNumber: 17
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
+                                                    lineNumber: 178,
+                                                    columnNumber: 19
+                                                }, this))
+                                        }, void 0, false, {
                                             fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                            lineNumber: 86,
+                                            lineNumber: 176,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                    lineNumber: 71,
+                                    lineNumber: 169,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                            lineNumber: 69,
+                            lineNumber: 106,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -335,18 +428,18 @@ function ConseilOperationnelPage() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                     className: "text-2xl font-semibold text-[#073E5D] mb-6",
-                                    children: "Besoin d'un accompagnement en Quantitative Risk & Analytics ?"
+                                    children: "Besoin d'un expert en modélisation des risques ?"
                                 }, void 0, false, {
                                     fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                    lineNumber: 97,
+                                    lineNumber: 187,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-gray-700 mb-8 max-w-2xl mx-auto",
-                                    children: "Contactez-nous pour discuter de vos besoins spécifiques et découvrir comment nos services de Quantitative Risk & Analytics peuvent contribuer à la performance et au développement de votre entreprise."
+                                    children: "Contactez-nous pour discuter de vos besoins spécifiques et découvrir comment notre practice Quantitative Risk & Analytics peut renforcer la maîtrise de vos risques et la qualité de vos décisions."
                                 }, void 0, false, {
                                     fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                    lineNumber: 98,
+                                    lineNumber: 188,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$projet$2d$interne$2f$y3$2d$audit$2d$conseils$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$3_react$2d$dom$40$18$2e$3$2e$1_react$40$18$2e$3$2e$1_$5f$react$40$18$2e$3$2e$1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -355,24 +448,24 @@ function ConseilOperationnelPage() {
                                     children: "Prendre rendez-vous"
                                 }, void 0, false, {
                                     fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                                    lineNumber: 102,
+                                    lineNumber: 192,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                            lineNumber: 96,
+                            lineNumber: 186,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                    lineNumber: 22,
+                    lineNumber: 100,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/projet-interne/y3-audit-conseils/app/services/conseil-operationnel/page.tsx",
-                lineNumber: 21,
+                lineNumber: 99,
                 columnNumber: 7
             }, this)
         ]
